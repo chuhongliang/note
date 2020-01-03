@@ -1,4 +1,4 @@
-# 个人学习笔记
+# note
 
 ### redis基础
 - [什么是redis](redis/什么是redis.md)
@@ -7,3 +7,4 @@
 
 ### redis进阶
 - [redis并发请求](redis/redis并发请求问题.md)
+- [redis缓存穿秀、缓存雪崩、缓存击穿](redis/redis缓存.md)
