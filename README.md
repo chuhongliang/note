@@ -14,4 +14,5 @@
 - [mysql事务](mysql/mysql事务.md)
 - [mysql索引](mysql/mysql索引.md)
 - [mysql存储过程](mysql/mysql存储过程.md)
+- [mysql优化](mysql/mysql优化.md)
   
