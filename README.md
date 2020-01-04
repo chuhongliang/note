@@ -1,15 +1,18 @@
 > 多数源自网络，收集整理只为自己学习方便
 # JaveScript
 - [类型](javascript/类型.md)
-- [Object](javascript/Object.md)
-- [Array](javascript/Array.md)
-- [String](javascript/String.md)
+- [对象](javascript/Object.md)
+- [数组](javascript/Array.md)
+- [字符串](javascript/String.md)
 - [Math](javascript/Math.md)
 - [匿名函数与闭包](javascript/匿名函数与闭包.md)
 - [原型](javascript/原型.md)
 - [常用设计模式](javascript/常用设计模式.md)
 ---
 
+# Node
+- ``[module]``[模块](node/module.md)
+- ``[event-loop]``[事件轮询](node/event-loop.md)
 
 # Redis
 - [什么是redis](redis/什么是redis.md)
