@@ -11,8 +11,8 @@
 ---
 
 # Node
-- ``[module]``[模块](node/module.md)
-- ``[event-loop]``[事件轮询](node/event-loop.md)
+- [模块加载机制](node/module.md)
+- [事件轮询](node/event-loop.md)
 
 # Redis
 - [什么是redis](redis/什么是redis.md)
