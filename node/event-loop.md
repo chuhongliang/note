@@ -96,8 +96,64 @@ event loop会转入下一下阶段.
 
 ---
 
+> 下面看一段代码
+``` javascript
+function test() {
+			console.log('script start');
+			
+			setTimeout(function () {
+				console.log('timeout1');
+				new Promise(function(reslove){
+					console.log('promise2');
+					reslove();
+				}).then(function(){
+					console.log('then2')
+				});
+				new Promise(function(reslove){
+					console.log('promise3');
+					reslove();
+				}).then(function(){
+					console.log('then3')
+				});
+			});
+
+			setTimeout(function(){
+				console.log('timeout2');
+			});
+
+			new Promise(resolve => {
+				console.log('promise1');
+				resolve();
+				setTimeout(() => console.log('timeout3'), 10);
+			}).then(function () {
+				console.log('then1')
+			})
+
+			console.log('script end');
+		}
+		test();
+```
+
+> 执行结果：
+``` javascript
+script start
+promise1
+script end
+then1
+timeout1
+promise2
+promise3
+timeout2
+then2
+then3
+timeout3
+
+```
+
+
 #### 参考指南
 
+* [浏览器与Node的事件循环(Event Loop)有何区别?](https://blog.fundebug.com/2019/01/15/diffrences-of-browser-and-node-in-event-loop/) 
 * [The Node.js Event Loop, Timers, and process.nextTick()](https://github.com/nodejs/node/blob/v6.x/doc/topics/event-loop-timers-and-nexttick.md)
 * [Node.js Event Loop 的理解 Timers，process.nextTick()](https://cnodejs.org/topic/57d68794cb6f605d360105bf)
 * [什么是浏览器的事件循环（Event Loop）](https://segmentfault.com/a/1190000010622146)

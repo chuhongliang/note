@@ -12,6 +12,8 @@
 ---
 
 # Node
+- [Node.js](node/node.md)
+- [内存管理](node/内存管理.md)
 - [模块加载机制](node/module.md)
 - [事件轮询](node/event-loop.md)
 
