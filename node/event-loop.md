@@ -99,39 +99,39 @@ event loop会转入下一下阶段.
 > 下面看一段代码
 ``` javascript
 function test() {
-			console.log('script start');
-			
-			setTimeout(function () {
-				console.log('timeout1');
-				new Promise(function(reslove){
-					console.log('promise2');
-					reslove();
-				}).then(function(){
-					console.log('then2')
-				});
-				new Promise(function(reslove){
-					console.log('promise3');
-					reslove();
-				}).then(function(){
-					console.log('then3')
-				});
-			});
+	console.log('script start');
 
-			setTimeout(function(){
-				console.log('timeout2');
-			});
+	setTimeout(function () {
+		console.log('timeout1');
+		new Promise(function (reslove) {
+			console.log('promise2');
+			reslove();
+		}).then(function () {
+			console.log('then2')
+		});
+		new Promise(function (reslove) {
+			console.log('promise3');
+			reslove();
+		}).then(function () {
+			console.log('then3')
+		});
+	});
 
-			new Promise(resolve => {
-				console.log('promise1');
-				resolve();
-				setTimeout(() => console.log('timeout3'), 10);
-			}).then(function () {
-				console.log('then1')
-			})
+	setTimeout(function () {
+		console.log('timeout2');
+	});
 
-			console.log('script end');
-		}
-		test();
+	new Promise(resolve => {
+		console.log('promise1');
+		resolve();
+		setTimeout(() => console.log('timeout3'), 10);
+	}).then(function () {
+		console.log('then1')
+	})
+
+	console.log('script end');
+}
+test();
 ```
 
 > 执行结果：
